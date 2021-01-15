@@ -1,3 +1,6 @@
+Deployed Link: https://student-pad.herokuapp.com/
+Github Repo: https://github.com/Callum-Ilett/StudentPad
+
 # School of Media Arts and Technology
 
 BSc (Hons) Digital Design & Web Development
