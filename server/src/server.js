@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.set("etag", false);
 
 // app.use("/", express.static(__dirname + "/public"));
-app.use("/", express.static(public));
+app.use("/", express.static("public"));
 // app.use(express.static("public"));
 app.use("/api", routes);
 
