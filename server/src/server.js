@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.set("etag", false);
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "..", "client/build")));
 
 app.use("/api", routes);
 
