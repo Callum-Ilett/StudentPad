@@ -26,7 +26,7 @@ const authController = {
     try {
       const id = req.user._id;
       createCookieFromToken(id, req, res);
-      res.redirect("http://localhost:3000/dashboard");
+      res.redirect("/dashboard");
     } catch (error) {
       return res.status(500).json(error);
     }
