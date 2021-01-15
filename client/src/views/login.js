@@ -111,7 +111,7 @@ export default function Register() {
           <Box display="flex">
             <GoogleLoginButton
               align="center"
-              onClick={() => history.push("/authentication/google")}
+              onClick={() => history.push("/api/authentication/google")}
             >
               <Typography variant="body1">Google</Typography>
             </GoogleLoginButton>
