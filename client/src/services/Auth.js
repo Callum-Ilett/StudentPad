@@ -3,7 +3,7 @@ import axios from "axios";
 const authService = {
   CheckAuthenticated: async () => {
     try {
-      return await axios.get("/authentication/status");
+      return await axios.get("/api/authentication/status");
     } catch (error) {
       return error.response;
     }
@@ -11,7 +11,7 @@ const authService = {
 
   RegisterUser: async (data) => {
     try {
-      return await axios.post("/authentication/register", data);
+      return await axios.post("/api/authentication/register", data);
     } catch (error) {
       return error.response;
     }
@@ -19,7 +19,7 @@ const authService = {
 
   Login: async (email, password) => {
     try {
-      return await axios.post("/authentication/login", { email, password });
+      return await axios.post("/api/authentication/login", { email, password });
     } catch (error) {
       return error.response;
     }
@@ -27,7 +27,7 @@ const authService = {
 
   Logout: async () => {
     try {
-      return await axios.get("/authentication/logout");
+      return await axios.get("/api/authentication/logout");
     } catch (error) {
       return error.response;
     }
@@ -35,7 +35,7 @@ const authService = {
 
   GetUserDetails: async (id) => {
     try {
-      return await axios.get(`/user/${id}`);
+      return await axios.get(`/api/user/${id}`);
     } catch (error) {
       return error.response;
     }

@@ -3,7 +3,7 @@ import axios from "axios";
 const reviewService = {
   GetAllReviews: async (propertyID) => {
     try {
-      return await axios.get(`/property/${propertyID}/reviews`);
+      return await axios.get(`/api/property/${propertyID}/reviews`);
     } catch (error) {
       return error.response;
     }
@@ -11,7 +11,7 @@ const reviewService = {
 
   GetUsersReviews: async (userID) => {
     try {
-      return await axios.get(`/user/${userID}/reviews`);
+      return await axios.get(`/api/user/${userID}/reviews`);
     } catch (error) {
       return error.response;
     }
@@ -19,7 +19,7 @@ const reviewService = {
 
   AddNewReview: async (reviewData) => {
     try {
-      return await axios.post("/property/reviews/add", reviewData);
+      return await axios.post("/api/property/reviews/add", reviewData);
     } catch (error) {
       return error.response;
     }

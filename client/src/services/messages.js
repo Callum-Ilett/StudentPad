@@ -3,7 +3,7 @@ import axios from "axios";
 const messagesService = {
   SyncMessages: async () => {
     try {
-      return await axios.get("/messages/sync");
+      return await axios.get("/api/messages/sync");
     } catch (error) {
       return error.response;
     }
@@ -11,7 +11,7 @@ const messagesService = {
 
   SendMessage: async (messageData) => {
     try {
-      return await axios.post("/messages/new", messageData);
+      return await axios.post("/api/messages/new", messageData);
     } catch (error) {
       return error.response;
     }

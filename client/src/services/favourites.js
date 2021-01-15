@@ -3,7 +3,7 @@ import axios from "axios";
 const favouriteService = {
   GetAllFavourites: async (userID) => {
     try {
-      return await axios.get(`/user/${userID}`);
+      return await axios.get(`/api/user/${userID}`);
     } catch (error) {
       return error.response;
     }
@@ -11,7 +11,10 @@ const favouriteService = {
 
   AddNewFavourite: async (propertyID, userID) => {
     try {
-      return await axios.post("/user/favourites/add", { propertyID, userID });
+      return await axios.post("/api/user/favourites/add", {
+        propertyID,
+        userID,
+      });
     } catch (error) {
       return error.response;
     }
