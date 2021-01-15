@@ -109,7 +109,10 @@ export default function Register() {
           <DividerWithText>OR</DividerWithText>
 
           <Box display="flex">
-            <GoogleLoginButton align="center">
+            <GoogleLoginButton
+              align="center"
+              onClick={() => history.push("/authentication/google")}
+            >
               <Typography variant="body1">Google</Typography>
             </GoogleLoginButton>
           </Box>

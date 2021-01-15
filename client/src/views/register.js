@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "@material-ui/styles";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
 import { DividerWithText } from "../components";
 
@@ -20,6 +20,7 @@ import { GoogleLoginButton } from "react-social-login-buttons";
 import useAuth from "../hooks/useAuth";
 
 export default function Register() {
+  const history = useHistory();
   const { RegisterWithEmailAndPassword } = useAuth();
   const [formData, setFormData] = useState({
     name: "",
@@ -119,7 +120,10 @@ export default function Register() {
           <DividerWithText>OR</DividerWithText>
 
           <Box display="flex">
-            <GoogleLoginButton align="center">
+            <GoogleLoginButton
+              align="center"
+              onClick={() => history.push("/authentication/google")}
+            >
               <Typography variant="body1">Google</Typography>
             </GoogleLoginButton>
           </Box>
