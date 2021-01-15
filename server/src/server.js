@@ -12,6 +12,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.set("etag", false);
 
-app.use("/", routes);
+app.use("/api", routes);
 
-app.listen(port, () => console.log(`Listening on http://localhost:${port}`));
+app.listen(port, () =>
+  console.log(`Listening on http://localhost:${port}/api`)
+);
